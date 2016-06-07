@@ -64,7 +64,7 @@ permalink: /about/
                 </div>
             </div>
 
-            <div class="panel">
+            <div class="panel hide">
                 <div class="accordion-heading">
                     <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#list4">
                         <span class="footer-links inner text-center " style="padding: 0px">
