@@ -1,0 +1,82 @@
+---
+layout: default
+---
+<article class="post hide " itemscope itemtype="http://schema.org/BlogPosting">
+
+	<header class="post-header">
+		<h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
+		<p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
+	</header>
+
+	<div class="post-content" itemprop="articleBody">
+		<!--{{ content1 }} {{page.date}} {{page.layout}}-->
+		<!--  {{content}} -->
+	</div>
+
+</article>
+
+<section class="contain animated " id="blog" data-animation="fadeInUp" data-animation-delay="50">
+
+		<div class="inner blog1 left1 center ">
+			<!-- Header -->
+			<div class="header post-header hide">
+				<h2 class="post-head" itemprop="name headline">{{ page.title }}</h2>
+			</div>
+            <h1 class="post-head hide">
+                {{ page.title |capitalize }}
+            </h1>
+
+			<!-- Post -->
+			<div class="post">
+				<!-- Post img -->
+				<!-- <div class="post-img">
+                     <a href="images/blog/1.jpg" class="zoom-button" data-rel="prettyPhoto"><i class="fa fa-search"></i></a>
+                     <img src="images/blog/1.jpg" alt="" />
+                 </div>-->
+				<!-- Post Texts -->
+				<div class="post-texts">
+                    <h1 class="post-head">
+                        {{ page.title }}
+                    </h1>
+                    <!-- Post Tags -->
+                    <div class="post-tags">
+                        <!-- Post Date -->
+                        <a class="tags">
+                            <i class="fa fa-clock-o">
+                            </i>
+                            {{ page.date | date: "%b %-d, %Y" }}
+                        </a>
+                        <!-- Posted By -->
+                        <a class="tags">
+                            <i class="fa fa-smile-o">
+                            </i>
+                            Posted By {{ page.posted | capitalize }}
+                        </a>
+                        <!-- Comments -->
+                        <a class="tags hide">
+                            <i class="fa fa-comment-o">
+                            </i>
+                            1 Comments
+                        </a>
+                    </div>
+
+					<p>
+						{{ content }}
+						<br>
+						</br>
+					</p>
+					<!-- More Button -->
+					<button class="btn btn-large btn-post" value="Back" onclick="window.history.back()">
+						Back
+						<i class="fa fa-angle-double-right hide"></i>
+					</button>
+				</div>
+				<!-- End Post Texts -->
+			</div>
+			<!-- Blog Pagination -->
+			<div class="clear">
+			</div>
+		</div>
+		<div class="clear">
+		</div>
+</section>

@@ -1,0 +1,207 @@
+---
+layout: page
+title: Blog
+#permalink: /blog/
+#paginate: true
+#lang: de 
+---
+<section class="contain animated" id="blog" data-animation="fadeInUp" data-animation-delay="50">
+    <div>
+        <div class="inner blog1 left1 center">
+            <!-- Post -->
+            {% for post in paginator.posts %}
+            <div class="post">
+                <!-- Post img -->
+                <!-- <div class="post-img">
+                     <a href="images/blog/1.jpg" class="zoom-button" data-rel="prettyPhoto"><i class="fa fa-search"></i></a>
+                     <img src="images/blog/1.jpg" alt="" />
+                 </div>-->
+                <!-- Post Texts -->
+                <div class="post-texts">
+                    <!-- Post Header -->
+                    <h1 class="post-head">
+                        {{ post.title }}
+                    </h1>
+                    <!-- Post Tags -->
+                    <div class="post-tags">
+                        <!-- Post Date -->
+                        <a class="tags">
+                            <i class="fa fa-clock-o">
+                            </i>
+                            {{ post.date | date: "%b %-d, %Y" }}
+                        </a>
+                        <!-- Posted By -->
+                        <a class="tags">
+                            <i class="fa fa-smile-o">
+                            </i>
+                            Posted By {{ post.posted | capitalize }}
+                        </a>
+                        <!-- Comments -->
+                        <a class="tags hide">
+                            <i class="fa fa-comment-o">
+                            </i>
+                            1 Comments
+                        </a>
+                    </div>
+                    <!-- Post Message -->
+                    <p>
+                        {{ post.content | strip_html | truncatewords:50}}
+                        <br>
+                        </br>
+                    </p>
+                    <!-- More Button -->
+                    <a class="btn btn-large btn-post" href="{{ post.url | prepend: site.baseurl }}">
+                        More . . .
+                        <i class="fa fa-angle-double-right hide">
+                        </i>
+                    </a>
+                </div>
+                <!-- End Post Texts -->
+            </div>
+            {% endfor %}
+            <!-- Blog Pagination -->
+            <ul class="pagination right ">
+                {% if paginator.previous_page %}
+                <li>
+                    <a href="{{ paginator.previous_page_path }}">
+                        Prev
+                    </a>
+                </li>
+                {% else %}
+                {% endif %}
+                <li>
+                    <span>
+                        Page :{{ paginator.page }} of {{ paginator.total_pages }}
+                    </span>
+                </li>
+                {% if paginator.next_page %}
+                <li>
+                    <a href="{{ paginator.next_page_path }}">
+                        Next
+                    </a>
+                </li>
+                {% else %}
+
+                {% endif%}
+            </ul>
+            <div class="clear">
+            </div>
+        </div>
+        <div class="sidebar inner right hide">
+            <div class="src">
+                <input class="search" name="search" placeholder="Search" type="text"/>
+            </div>
+            <div class="element post-categories">
+                <h3>
+                    Categories
+                </h3>
+                <ul>
+                    <li>
+                        <a href="#">
+                            Creative
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Web Design
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Photography
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Video
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Graphic Design
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="element text-widget">
+                <h3>
+                    text widget
+                </h3>
+                <p>
+                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page
+                </p>
+                <p>
+                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+                </p>
+            </div>
+            <div class="element text-widget">
+                <h3>
+                    Tags
+                </h3>
+                <a class="tag" href="#">
+                    Photography
+                </a>
+                <a class="tag" href="#">
+                    Design
+                </a>
+                <a class="tag" href="#">
+                    Web
+                </a>
+                <a class="tag" href="#">
+                    PHP
+                </a>
+                <a class="tag" href="#">
+                    Graphic Design
+                </a>
+                <a class="tag" href="#">
+                    Video
+                </a>
+                <a class="tag" href="#">
+                    HTML & CSS
+                </a>
+                <a class="tag" href="#">
+                    Icons
+                </a>
+                <a class="tag" href="#">
+                    Technology
+                </a>
+                <div class="clear">
+                </div>
+            </div>
+            <div class="element post-categories">
+                <h3>
+                    Archives
+                </h3>
+                <ul>
+                    <li>
+                        <a href="#">
+                            1 Jun 2013
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            15 Oct 2013
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            11 Dec 2013
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            6 Jan 2014
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            13 Jan 2014
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+</section>
