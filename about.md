@@ -10,10 +10,10 @@ permalink: /about/
 
         <!-- why-wisten Top Icon -->
 
-       <!-- &lt;!&ndash; Iphone images &ndash;&gt;
-        <div class="w-iphone animated" data-animation="fadeInLeft" data-animation-delay="0">
-            <img src="images/w-iphone.png" alt="wisten-iphone">
-        </div>-->
+        <!-- &lt;!&ndash; Iphone images &ndash;&gt;
+         <div class="w-iphone animated" data-animation="fadeInLeft" data-animation-delay="0">
+             <img src="images/w-iphone.png" alt="wisten-iphone">
+         </div>-->
 
         <!-- accordion menu -->
         <div class="accordion animated" id="accordion2" data-animation="fadeInRightBig" data-animation-delay="50">
@@ -64,7 +64,7 @@ permalink: /about/
                 </div>
             </div>
 
-            <div class="panel">
+            <div class="panel hide">
                 <div class="accordion-heading">
                     <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#list4">
                         <span class="footer-links inner text-center " style="padding: 0px">

@@ -1,34 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- CSS Files -->
-    {% include head.html %}
-    <!-- End CSS Files -->
+    {% include link.html %}
+
 </head>
-<body data-offset="50" data-spy="scroll" data-target=".nav-menu">
+<!--<body>-->
+<body data-spy="scroll" data-target=".nav-menu" data-offset="50">
 
-    <!-- Navbar-->
-    {% include navbar.html %}
-    <!-- Navbar-->
+{% include navbar.html %}
 
-    <!-- Content-->
-    {{ content }}
-    <!-- Content-->
+{{ content}}
 
-    <!--Footer-->
-    {% include footer.html %}
-    <!--Footer-->
+{% include footer.html %}
 
-    <!-- Back To Top Button -->
-    <section id="back-top">
-        <a class="scroll" href="#home">
-        </a>
-    </section>
-    <!-- End Back To Top Button -->
 
-    <!-- JS Files -->
-    {% include javascript.html %}
-    <!-- End JS Files -->
+{% include script.html %}
 
+<!-- Back To Top Button -->
+<section id="back-top">
+    <a href="#home" class="scroll"></a>
+</section>
+<!-- End Back To Top Button -->
+
+<script></script>
 </body>
 </html>

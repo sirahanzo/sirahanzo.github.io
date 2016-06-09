@@ -1,34 +1,393 @@
-<section class="" id="home">
+<!-- Home Section -->
+<section id="home" class="">
+
+
+
+
     <!-- Navigation Section -->
-    <section class="shadow" id="navigation">
+    <section id="navigation" class="shadow">
+
         <div class="inner navigation">
+
             <!-- Logo Img -->
             <div class="logo">
-                <a class="scroll" href="/">
-                    <img alt="Logo" src="/assets/images/logo.png"/>
-                </a>
+                <a class="scroll" href="/"><img src="/assets/images/logo.png" alt="Logo"/></a>
             </div>
+
             <!-- Nav Menu -->
             <div class="nav-menu">
+
                 <ul class="nav main-nav">
                     {% for my_page in site.pages %}
                     <li>
                         {% if my_page.title %}
-                           {% unless my_page.url contains '/blog/page2/' %}
+                        {% unless my_page.url contains '/blog/page2/' %}
                         <a class="page-link {% if my_page.url == page.url %} active {% endif %} " href="{{ my_page.url | prepend: site.baseurl }}">
                             {{ my_page.title }}
                         </a>
-                          {% endunless %}
-          
+                        {% endunless %}
+
+                        {% endif %}
+                    </li>
+                    {% endfor %}
+                </ul>
+
+            </div>
+
+
+            <!-- Dropdown Menu For Mobile Devices-->
+            <div class="dropdown mobile-drop">
+                <a data-toggle="dropdown" class="mobile-menu" href="#"><i class="fa fa-bars"></i></a>
+                <ul class="nav dropdown-menu fullwidth" role="menu" >
+
+                    {% for my_page in site.pages %}
+                    <li>
+                        {% if my_page.title %}
+                        {% unless my_page.url contains '/blog/page2/' %}
+                        <a class="scroll {% if my_page.url == page.url %} active {% endif %} " href="{{ my_page.url | prepend: site.baseurl }}">
+                            {{ my_page.title }}
+                        </a>
+                        {% endunless %}
+
                         {% endif %}
                     </li>
                     {% endfor %}
                 </ul>
             </div>
-            <!-- Nav Menu -->
-            <div class="clear">
-            </div>
+
+            <div class="clear"></div>
         </div>
+
     </section>
     <!-- End Navigation Section -->
+
+
+    <!-- Rev Slider -->
+    <section id="slider" class="contain hide">
+
+        <div class="tp-banner">
+
+            <ul>
+                <!-- Slide -->
+                <li class="revslide" data-transition="random" data-slotamount="7" data-masterspeed="800" >
+                    <!-- MAIN IMAGE -->
+                    <img src="images/rev-slider/slide1.jpg"  alt="slidebg1"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+                    <!-- LAYERS -->
+
+                    <!-- Layer 1 -->
+                    <div class="tp-caption  lft customout"
+                         data-x="700"
+                         data-y="110"
+                         data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                         data-speed="500"
+                         data-start="1200"
+                         data-easing="Power4.easeOut"
+                         data-endspeed="500"
+                         data-endeasing="Power4.easeIn"
+                         data-captionhidden="on">
+                        <p class="stext p1">Clean And</p>
+                        <h1 class="stext h1">Responsive <span>Design</span></h1>
+                    </div>
+
+                    <!-- Layer 2 -->
+                    <div class="tp-caption  skewfromrightshort customout"
+                         data-x="700"
+                         data-y="180"
+                         data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                         data-speed="500"
+                         data-start="1500"
+                         data-easing="Power4.easeOut"
+                         data-endspeed="500"
+                         data-endeasing="Power4.easeIn"
+                         data-captionhidden="on">
+                        <h2 class="stext h2">There are many variataons passages Lorem ıpsum<br/>The standard chunk of Lorem Ipsum</h2>
+                    </div>
+
+                    <!-- Layer 3 -->
+                    <div class="tp-caption customin customout"
+                         data-x="723"
+                         data-y="280"
+                         data-customin="x:0;y:50;z:0;rotationX:0;rotationY:0;rotationZ:0;skewX:0;skewY:0;opacity:0;transformPerspective:0;transformOrigin:50% 50%;"
+                         data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                         data-speed="400"
+                         data-start="1700"
+                         data-easing="Power4.easeOut"
+                         data-endspeed="500"
+                         data-endeasing="Power4.easeIn"
+                    >
+                        <img src="images/rev-slider/s1.png" alt="">
+                    </div>
+
+                    <!-- Layer 4 -->
+                    <div class="tp-caption customin customout"
+                         data-x="723"
+                         data-y="335"
+                         data-customin="x:0;y:50;z:0;rotationX:0;rotationY:0;rotationZ:0;skewX:0;skewY:0;opacity:0;transformPerspective:0;transformOrigin:50% 50%;"
+                         data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                         data-speed="400"
+                         data-start="1850"
+                         data-easing="Power4.easeOut"
+                         data-endspeed="500"
+                         data-endeasing="Power4.easeIn"
+                    >
+                        <img src="images/rev-slider/s2.png" alt="">
+                    </div>
+
+                    <!-- Layer 5 -->
+                    <div class="tp-caption customin customout"
+                         data-x="723"
+                         data-y="390"
+                         data-customin="x:0;y:50;z:0;rotationX:0;rotationY:0;rotationZ:0;skewX:0;skewY:0;opacity:0;transformPerspective:0;transformOrigin:50% 50%;"
+                         data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                         data-speed="400"
+                         data-start="2000"
+                         data-easing="Power4.easeOut"
+                         data-endspeed="500"
+                         data-endeasing="Power4.easeIn"
+                    >
+                        <img src="images/rev-slider/s3.png" alt="">
+                    </div>
+
+                    <!-- Layer 6 -->
+                    <div class="tp-caption customin customout"
+                         data-x="780"
+                         data-y="280"
+                         data-customin="x:50;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;skewX:0;skewY:0;opacity:0;transformPerspective:0;transformOrigin:50% 50%;"
+                         data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                         data-speed="400"
+                         data-start="1700"
+                         data-easing="Power4.easeOut"
+                         data-endspeed="500"
+                         data-endeasing="Power4.easeIn"
+                    >
+                        <h3 class="stext h3">There are many variations of passages.</h3>
+                    </div>
+
+                    <!-- Layer 7 -->
+                    <div class="tp-caption customin customout"
+                         data-x="780"
+                         data-y="335"
+                         data-customin="x:50;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;skewX:0;skewY:0;opacity:0;transformPerspective:0;transformOrigin:50% 50%;"
+                         data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                         data-speed="400"
+                         data-start="1850"
+                         data-easing="Power4.easeOut"
+                         data-endspeed="500"
+                         data-endeasing="Power4.easeIn"
+                    >
+                        <h3 class="stext h3">Contrary to popular.</h3>
+                    </div>
+
+                    <!-- Layer 8 -->
+                    <div class="tp-caption customin customout"
+                         data-x="780"
+                         data-y="390"
+                         data-customin="x:50;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;skewX:0;skewY:0;opacity:0;transformPerspective:0;transformOrigin:50% 50%;"
+                         data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                         data-speed="400"
+                         data-start="2000"
+                         data-easing="Power4.easeOut"
+                         data-endspeed="500"
+                         data-endeasing="Power4.easeIn"
+                    >
+                        <h3 class="stext h3">popular belief, Lorem Ipsum.</h3>
+                    </div>
+
+
+                </li>
+
+
+                <!-- Slide -->
+                <li class="revslide" data-transition="random" data-slotamount="7" data-masterspeed="800" >
+                    <!-- MAIN IMAGE -->
+                    <img src="images/rev-slider/slide2.jpg"  alt="slidebg2"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+                    <!-- LAYERS -->
+
+                    <!-- Layer 1 -->
+                    <div class="tp-caption sft customout"
+                         data-x="center"
+                         data-y="220"
+                         data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                         data-speed="900"
+                         data-start="1400"
+                         data-easing="Power4.easeOut"
+                         data-endspeed="500"
+                         data-endeasing="Power4.easeIn"
+                         data-captionhidden="on">
+                        <h4 class="stext h4">clean and responsive design</h4>
+                    </div>
+
+                    <!-- Layer 2 -->
+                    <div class="tp-caption sfb customout"
+                         data-x="center"
+                         data-y="320"
+                         data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                         data-speed="900"
+                         data-start="1700"
+                         data-easing="Power4.easeOut"
+                         data-endspeed="500"
+                         data-endeasing="Power4.easeIn"
+                         data-captionhidden="on">
+                        <h5 class="stext h5">There are many variataons of passages Lorem ıpsum The standard chunk</h5>
+                    </div>
+
+                </li>
+
+                <!-- Slide -->
+                <li class="revslide" data-transition="random" data-slotamount="7" data-masterspeed="800" >
+                    <!-- MAIN IMAGE -->
+                    <img src="images/rev-slider/slide3.jpg"  alt="slidebg3"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+                    <!-- LAYERS -->
+
+                    <!-- Layer 1 -->
+                    <div class="tp-caption sfl customout"
+                         data-x="0"
+                         data-y="185"
+                         data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                         data-speed="900"
+                         data-start="1200"
+                         data-easing="Power4.easeOut"
+                         data-endspeed="500"
+                         data-endeasing="Power4.easeIn"
+                         data-captionhidden="on">
+                        <h6 class="stext h6">it’s <span>wisten</span> time</h6>
+                    </div>
+
+                    <!-- Layer 2 -->
+                    <div class="tp-caption sfl customout"
+                         data-x="0"
+                         data-y="245"
+                         data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                         data-speed="900"
+                         data-start="1500"
+                         data-easing="Power4.easeOut"
+                         data-endspeed="500"
+                         data-endeasing="Power4.easeIn"
+                         data-captionhidden="on">
+                        <p class="stext p5">super responsive, clean creative theme</p>
+                    </div>
+
+                    <!-- Layer 3 -->
+                    <div class="tp-caption sfb customout"
+                         data-x="0"
+                         data-y="275"
+                         data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                         data-speed="900"
+                         data-start="1800"
+                         data-easing="Power4.easeOut"
+                         data-endspeed="500"
+                         data-endeasing="Power4.easeIn"
+                         data-captionhidden="on">
+                        <p class="stext p6">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praes<br/>entium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi<br/>sint occaecati</p>
+                    </div>
+
+                    <!-- Layer 4 -->
+                    <div class="tp-caption sfb customout not-mobile"
+                         data-x="0"
+                         data-y="345"
+                         data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                         data-speed="900"
+                         data-start="2100"
+                         data-easing="Power4.easeOut"
+                         data-endspeed="500"
+                         data-endeasing="Power4.easeIn"
+                         data-captionhidden="on">
+                        <img src="images/rev-slider/check.png" alt="check"/>
+                    </div>
+
+                    <!-- Layer 5 -->
+                    <div class="tp-caption sfb customout not-mobile"
+                         data-x="20"
+                         data-y="345"
+                         data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                         data-speed="900"
+                         data-start="2150"
+                         data-easing="Power4.easeOut"
+                         data-endspeed="500"
+                         data-endeasing="Power4.easeIn"
+                         data-captionhidden="on">
+                        <p class="stext p6">Parallax Efect</p>
+                    </div>
+
+                    <!-- Layer 6 -->
+                    <div class="tp-caption sfb customout not-mobile"
+                         data-x="118"
+                         data-y="345"
+                         data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                         data-speed="900"
+                         data-start="2200"
+                         data-easing="Power4.easeOut"
+                         data-endspeed="500"
+                         data-endeasing="Power4.easeIn"
+                         data-captionhidden="on">
+                        <img src="images/rev-slider/check.png" alt="check"/>
+                    </div>
+
+                    <!-- Layer 7 -->
+                    <div class="tp-caption sfb customout not-mobile"
+                         data-x="138"
+                         data-y="345"
+                         data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                         data-speed="900"
+                         data-start="2250"
+                         data-easing="Power4.easeOut"
+                         data-endspeed="500"
+                         data-endeasing="Power4.easeIn"
+                         data-captionhidden="on">
+                        <p class="stext p6">Professional Look</p>
+                    </div>
+
+                    <!-- Layer 8 -->
+                    <div class="tp-caption sfb customout not-mobile"
+                         data-x="260"
+                         data-y="345"
+                         data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                         data-speed="900"
+                         data-start="2300"
+                         data-easing="Power4.easeOut"
+                         data-endspeed="500"
+                         data-endeasing="Power4.easeIn"
+                         data-captionhidden="on">
+                        <img src="images/rev-slider/check.png" alt="check"/>
+                    </div>
+
+                    <!-- Layer 9 -->
+                    <div class="tp-caption sfb customout not-mobile"
+                         data-x="280"
+                         data-y="345"
+                         data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                         data-speed="900"
+                         data-start="2350"
+                         data-easing="Power4.easeOut"
+                         data-endspeed="500"
+                         data-endeasing="Power4.easeIn"
+                         data-captionhidden="on">
+                        <p class="stext p6">One Page Design</p>
+                    </div>
+
+                </li>
+
+            </ul>
+        </div>
+    </section>
+    <!-- End Rev Slider -->
+
+    <!-- Text Area -->
+    <section class="hide" id="text-area">
+        <div class="inner text-area">
+            <h1>welcome to <span>wisten.</span> The standard chunk of Lorem Ipsum</h1>
+
+            <a href="#" class="button purchase">
+                Purchase
+            </a>
+
+            <a href="#about" class="button more scroll">
+                Read More
+            </a>
+
+        </div>
+    </section>
+    <!-- End Rev Slider -->
+
 </section>
+<!-- End Home Section -->
