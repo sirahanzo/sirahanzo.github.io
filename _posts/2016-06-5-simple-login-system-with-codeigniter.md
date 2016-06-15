@@ -327,7 +327,7 @@ Class User extends CI_Model{
 
 {% endhighlight %}
 
-Buat file home.php pada controllers
+Buat file "home.php" pada controllers
 
 {% highlight php %}
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
